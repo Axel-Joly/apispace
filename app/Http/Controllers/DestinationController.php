@@ -114,7 +114,7 @@ class DestinationController extends Controller
         //$destination->image = 'tato';
         if($request->file('image')){
             $filename = $request->file('image')->store('img','public');
-            $destination->image = 'storage/'.$filename;
+            $destination->image = '/storage/'.$filename;
         }
 
         $destination->save();
